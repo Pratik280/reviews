@@ -38,121 +38,69 @@ li{
 .spacing > *+* {
   margin-top: var(--spacer, 2rem);
 }
-/* main, */
-/* header, */
-/* section { */
-/*   padding: 1.5rem 0; */
-/*   margin: 1.5rem 0; */
-/*   @media (min-width: 40em) { */
-/*     main, */
-/*     header, */
-/*     section { */
-/*       padding: 7rem 0; */
-/*       margin: 7rem 0; */
-/*     } */
-/*   } */
-/* } */
-
-/* in flex to make all children to take equal amount of space */
-/* .parent{ */
-/*   display: flex; */
-/* } */
-
-/* .parent > * { */
-/*   flex-basis: 100%; */
-/* } */
 
 /* ==== CUSTOM PROPERTIES (VARIABLES) */
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 :root{
 
-  /* ==== colors is hsl ==== */
-  --clr-primary-one: hsl(,,);
-  --clr-primary-two: hsl(,,);
+  --clr-primary-one: #49a6e9;
+  --clr-primary-two: #102a42;
+  --clr-primary-three: #617d98;
 
-  --clr-secondary-one: hsl(,,);
-  --clr-secondary-two: hsl(,,);
+  --clr-secondary-one: #f1f5f8;
+  --clr-secondary-two: #ffffff;
 
   /* font */
   font-size: 62.5%;
-
-  --fs-900: clamp(7.5rem, 10vw, 12rem);
-  --fs-700: clamp(5rem, 10vw, 10rem);
-  --fs-500: clamp(1.5rem, 2vw, 2rem);
+  --fs-700: clamp(2.5rem, 5vw, 3.5rem);
   --fs-400: clamp(1.25rem, 2vw, 1.75rem);
-
-  --ff-primary: 'Poppins', sans-serif;
-  --ff-secondary: 'Spartan', sans-serif;
-
-
-  /* scroll-behavior: smooth; */
+  --ff-primary: 'Roboto', sans-serif;
 }
 
-/* ==== TYPOGRAPHY ==== */
-
-/* font-weight */
-.ff-primary{
+body {
   font-family: var(--ff-primary);
-}
-
-.ff-secondary{
-  font-family: var(--ff-secondary);
-}
-
-/* font-weight */
-.fw-400{
-  font-weight: 400;
-}
-
-.fw-500{
-  font-weight: 500;
-}
-
-.fw-700{
-  font-weight: 700;
-}
-
-.fw-900{
-  font-weight: 900;
-}
-
-/* line-height */
-.lh-16{
-  line-height: 1.6;
-}
-
-.lh-1{
-  line-height: 1;
-}
-
-/* font-size */
-.fs-400{
   font-size: var(--fs-400);
+  font-weight: 400;
+  min-height: 100vh;
+  text-align: center;
 }
 
-.fs-500{
-  font-size: var(--fs-500);
-}
-
-.fs-700{
+.heading {
   font-size: var(--fs-700);
-}
-
-.fs-900{
-  font-size: var(--fs-900);
-}
-
-/* font-color */
-.fc-primary-one{
-  color: var(--clr-primary-one);
-}
-
-.fc-primary-two{
+  font-weight: 700;
   color: var(--clr-primary-two);
+  letter-spacing: 0.275rem;
 }
 
-/* ==== BACKGROUND COLORS ==== */
+.card__name {
+  color: var(--clr-primary-two);
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+}
 
-.bg-secondary-two{
+.card__job {
+  color: var(--clr-primary-one);
+  text-transform: uppercase;
+}
+
+.card__text {
+  color: var(--clr-primary-three);
+}
+
+.btn {
+  color: var(--clr-primary-two);
+  text-transform: capitalize;
+  padding: 0.75rem 1.25rem;
   background: var(--clr-secondary-two);
+  border: 0.1rem solid var(--clr-primary-two);
+  border-radius: 0.75rem;
+  transition: all 0.3s linear;
 }
+
+.btn:hover, .btn:focus {
+  color: var(--clr-secondary-two);
+  background: var(--clr-primary-two);
+  cursor: pointer;
+}
+
